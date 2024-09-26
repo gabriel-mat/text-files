@@ -6,6 +6,12 @@ int main(){
   FILE *read, *write;
 
   read = fopen("source.txt", "r");
+
+  if (read == NULL){
+  printf("source file does not exist.\n");
+  return 0;
+  }
+
   write = fopen("final.txt", "w");
 
   fscanf(read, " %20[^\n]", str);
